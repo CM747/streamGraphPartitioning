@@ -120,7 +120,7 @@
                                 Divide the stream in chunks of size C and fill partitions in order.
                             </p>
                             <div class="d-flex justify-content-around" style="font-style: italic;">
-                                ind =⌈ t/C ⌉
+                                ind =⌈t/C⌉
                             </div>
                         </li>
                         <li class="heuristic">
@@ -135,9 +135,10 @@
                                 Assign v to the partition with most edges.
                             </p>
                             <div class="d-flex justify-content-around" style="font-style: italic;">
-                                ind= argmax{ |Pt(i) ∩ Γ(v)| w(t,i) } where w(t,i) is the penalty function w(t,i) = 1 for unweighted greedy
-                                = 1 - ( |Pt(i)|/C ) for linear weighted
-                                = 1 - exp{ | Pt(i) | - C } for exponentially weighted
+                                ind = argmax{ |Pt(i) ∩ Γ(v)| w(t,i) } 
+                                <br>where w(t,i) is the penalty function w(t,i) = 1 for unweighted greedy
+                                <br>= 1 - ( |Pt(i)|/C ) for linear weighted
+                                <br>= 1 - exp{ | Pt(i) | - C } for exponentially weighted
                             </div>
                         </li>
                         <li class="heuristic">
@@ -218,11 +219,6 @@
                                 <strong>Wiki-vote</strong> - This network has 7.1K nodes and approximately 103K edges.
                             </p>
                         </li>
-                        <li>
-                            <p class="lead">
-                                <strong>Slash-dot</strong> - This network has 82K nodes and approximately 948K edges.
-                            </p>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -239,13 +235,35 @@
             </div>
         </section>
 
+        
+        
         <section id="evaluation" class="section_heading">
             <div>
                 <h2 class="display-4">Evaluation</h2>
                 <hr>
-                
+                <p class="lead">
+                    Our main evaluation criteria is the ratio of total cross-partition edges and the total edges in the graph. The lower this value, the more successful an algorithm is.
+                    <br><br>For each dataset we present the results of the heuristics:
+                </p>
+                <ul class="lead" style="list-style-type: decimal;">
+                    <li>
+                        <strong>Wiki-vote</strong>
+                        <div class="d-flex justify-content-around">
+                            <img src="data/wikiVoteResults.png" height="400px" width="650px">
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Ego-facebook</strong>
+                        <div class="d-flex justify-content-around">
+                            <img src="data/facebookResults.png" height="400px" width="650px">
+                        </div>
+                    </li>
+                </ul>
             </div>
+
         </section>
+
+
 
         <section id="conclusion" class="section_heading">
             <div>
